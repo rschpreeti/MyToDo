@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>My-ToDos</title>
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+            rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!--    <link rel="stylesheet"-->
+<!--          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet"-->
+<!--          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">-->
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+            <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color:#f2e6ff">
+    <div id="cover-spin"></div>
+
+<div style="padding:0 30vw">
+<!-- Pills navs -->
+<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
+           aria-controls="pills-login" aria-selected="true">Login</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
+           aria-controls="pills-register" aria-selected="false">Register</a>
+    </li>
+</ul>
+<!-- Pills navs -->
+
+<!-- Pills content -->
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+        <form>
+            <p class="h1 text-center mt-2 mb-3 pb-2 text-primary">
+                <i class="fas fa-check-square me-1"></i>
+                <u>My Todo-s</u>
+            </p>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" id="loginName" class="form-control" />
+                <label class="form-label" for="loginName">Enter registered email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="loginPassword" class="form-control" />
+                <label class="form-label" for="loginPassword">Password</label>
+            </div>
+
+            <!-- 2 column grid layout -->
+            <div class="row mb-4">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check mb-3 mb-md-0">
+                        <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                        <label class="form-check-label" for="loginCheck"> Remember me </label>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex justify-content-center">
+                    <!-- Simple link -->
+                    <a href="#!">Forgot password?</a>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="button" id="loginBtn" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Not a member? register now</p>
+            </div>
+        </form>
+    </div>
+    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+        <form>
+            <p class="h1 text-center mt-2 mb-3 pb-2 text-primary">
+                <i class="fas fa-check-square me-1"></i>
+                <u>My Todo-s</u>
+            </p>
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <input type="text" id="registerName" class="form-control" />
+                <label class="form-label" for="registerName">Full Name</label>
+            </div>
+
+            <!-- Username input -->
+            <div class="form-outline mb-4">
+                <input type="tel" id="registerMobNo" class="form-control" />
+                <label class="form-label" for="registerMobNo">Mobile No</label>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="email" id="registerEmail" class="form-control" />
+                <label class="form-label" for="registerEmail">Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="registerPassword" class="form-control" />
+                <label class="form-label" for="registerPassword">Password</label>
+            </div>
+
+            <!-- Repeat Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" id="registerRepeatPassword" class="form-control" />
+                <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="form-check d-flex justify-content-center mb-4">
+                <input class="form-check-input me-2" disabled type="checkbox" value="" id="registerCheck" checked
+                       aria-describedby="registerCheckHelpText" />
+                <label class="form-check-label" for="registerCheck">
+                    I agree to receive the notification on mail.
+                </label>
+            </div>
+
+            <!-- Submit button -->
+            <button  type="button" class="btn btn-primary btn-block mb-3" id="Registered">Sign up</button>
+        </form>
+    </div>
+</div>
+<!-- Pills content -->
+</div>
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
+></script>
+<!--Main JS file-->
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
