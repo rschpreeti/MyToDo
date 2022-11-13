@@ -1,0 +1,38 @@
+package com.todo.AdvanceToDo.Services;
+
+import com.todo.AdvanceToDo.SecureData;
+import com.todo.AdvanceToDo.Entities.UserInfo;
+import com.todo.AdvanceToDo.Reposiitry.UserRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import javax.sound.midi.Soundbank;
+import java.util.Optional;
+
+@Service
+public class UserService {
+    @Autowired
+    UserRepo userRepo;
+
+    public int addUser(UserInfo user){
+        int flag=-1;
+        Optional<UserInfo> checkuser= Optional.ofNullable(userRepo.findByEmailId(user.getEmailId()));
+        try {
+            if(!checkuser.isPresent()){
+                userRepo.save(user);
+                flag=1;
+            }else{
+                flag=0;
+                throw new Exception("This Email already exist..\nTry with another email or sign in to proceed");
+            }
+        }catch (Exception e){
+            System.out.println("Error..");
+        }
+        return flag;
+    }
+
+    public UserInfo validateUser(String email, String password) {
+
+        return  userRepo.findByEmailIdAndPassword(email, SecureData.encrypt(password));
+    }
+}
